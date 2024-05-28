@@ -12,5 +12,5 @@ from app.main import get_coin_combination
         pytest.param(50, [0, 0, 0, 2]),
     ]
 )
-def test_success(coins, number_coins):
+def test_success(coins: int, number_coins: list) -> None:
     assert get_coin_combination(coins) == number_coins
